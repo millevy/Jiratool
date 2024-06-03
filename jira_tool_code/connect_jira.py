@@ -11,7 +11,7 @@ import datetime
 
 
 def main():
-    days = input("How many days have past cience last comment? ")
+    days = input("How many days have past since last comment? ")
     days_since_last_comment = int(days)
     current_date = datetime.datetime.now(datetime.timezone.utc)
 
@@ -37,7 +37,7 @@ def main():
             no_comments = True
         if no_comments or days_delta >= days_since_last_comment:
             results_dict[issue.key] = {"Summary": issue.fields.summary,
-                                   "Assignee": issue.fields.assignee.displayName if issue.fields.assignee else "NA", "Days since last comment": days_delta}
+                                   "Assignee": issue.fields.assignee.displayName if issue.fields.assignee else "NA", "Days since last comment": days_delta, "Jira link": issue.permalink()}
         #import ipdb; ipdb.set_trace()
     pprint.pprint(results_dict)
 
