@@ -11,7 +11,7 @@ import datetime
 
 
 def main():
-    days = input("How many days have past cience last comment? ")
+    days = input("How many days have past since last comment? ")
     days_since_last_comment = int(days)
     current_date = datetime.datetime.now(datetime.timezone.utc)
 
