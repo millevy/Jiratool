@@ -13,7 +13,7 @@ def main():
     current_date = datetime.datetime.now(datetime.timezone.utc)
 
     jira = JIRA(
-        token_auth="MjAyNDY5NzUwOTA1OmVX7Er5UXYXUK8kU/9XJ0+CUplJ",
+        token_auth="",
         server="https://issues.redhat.com",
     )
 
